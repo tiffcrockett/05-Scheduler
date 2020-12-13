@@ -1,0 +1,8 @@
+$(document).ready(function() {
+
+    $('#currentDay').append(moment().format('ddd,MMMM Do YYY'));
+    
+    
+
+
+})
