@@ -1,6 +1,14 @@
-$(document).ready(function(){
+$(document).ready(function(){ 
 
-    $('#currentDay').append(moment().format('dddd MMMM Do, YYYY, LT'));
+    window.onload = function() {
+        // display previously stored toDos 
+        var savedToDos = JSON.parse(localStorage.getItem("savedToDos"));
+        if(savedToDos !== null){
+            $("#text-" + i).val(localStorage.getItem("savedToDos"));
+        }
+    }
+    // display current date
+    $('#currentDay').append(moment().format('dddd MMMM Do, YYYY, LT')); 
 
     // use 24 hour time for past, present, future
     var time24Hr = moment().format("HH"); 
@@ -13,10 +21,9 @@ $(document).ready(function(){
                 console.log("#time-"+i)
                 $("#time-"+ i).text(workTime); 
 
-
             var workTime24Hr = moment(number.toString(), "LT").format("HH"); 
-            console.log(workTime24Hr); 
-            console.log(time24Hr);
+                console.log(workTime24Hr); 
+                console.log(time24Hr);
 
             if(time24Hr === workTime24Hr) {
                 $("#text-" + i).css({"background-color":"#ff6961", "color":"white"})
@@ -26,8 +33,11 @@ $(document).ready(function(){
                 $("#text-" + i).css({"background-color":"#d3d3d3", "color":"white"})
             } 
 
-            
-               
-    });
+            $("saveBtn").on("click", function(){ 
+                savedToDos.push($("#text-" + i).val()); 
+                localStorage.setItem("savedToDos", JSON.stringify("savedToDos").val());   
+            })  
+        }      
+    );
     
 });  
