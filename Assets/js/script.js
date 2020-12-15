@@ -1,12 +1,5 @@
 $(document).ready(function(){ 
 
-    window.onload = function() {
-        // display previously stored toDos 
-        var savedToDos = JSON.parse(localStorage.getItem("savedToDos"));
-        if(savedToDos !== null){
-            $("#text-" + i).val(localStorage.getItem("savedToDos"));
-        }
-    }
     // display current date
     $('#currentDay').append(moment().format('dddd MMMM Do, YYYY, LT')); 
 
@@ -33,11 +26,18 @@ $(document).ready(function(){
                 $("#text-" + i).css({"background-color":"#d3d3d3", "color":"white"})
             } 
 
-            $("saveBtn").on("click", function(){ 
-                savedToDos.push($("#text-" + i).val()); 
-                localStorage.setItem("savedToDos", JSON.stringify("savedToDos").val());   
-            })  
+            var toDos = localStorage.getItem("toDos");
+            if(toDos != null) { 
+                $("#text-"+i).val(localStorage.getItem("toDos"));
+            } 
+            
+            $(".saveBtn").on("click", function(event){ 
+                var toDoId = $(this).data("number");
+                var toDoVal = $("#"+toDoId).val();
+                localStorage.setItem("toDos", toDoVal); 
+        
+                console.log(toDoId, toDoVal)
+            })
         }      
     );
-    
 });  
