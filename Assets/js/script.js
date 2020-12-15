@@ -26,18 +26,17 @@ $(document).ready(function(){
                 $("#text-" + i).css({"background-color":"#d3d3d3", "color":"white"})
             } 
 
-            var toDos = localStorage.getItem("toDos");
-            if(toDos != null) { 
-                $("#text-"+i).val(localStorage.getItem("toDos"));
-            } 
+            // var toDos = localStorage.getItem("toDos");
             
+                 
             $(".saveBtn").on("click", function(event){ 
                 var toDoId = $(this).data("number");
                 var toDoVal = $("#"+toDoId).val();
-                localStorage.setItem("toDos", toDoVal); 
-        
+                localStorage.setItem("toDos", toDoVal);   
+
                 console.log(toDoId, toDoVal);
-            })
-        }      
-    );
-});  
+
+            })  
+        }
+    )}         
+);  
