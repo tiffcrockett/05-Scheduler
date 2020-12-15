@@ -11,7 +11,7 @@ $(document).ready(function(){
 
         numbers.forEach((number, i) => { 
             workTime = moment(number.toString(), "LT").format("hh:mm A"); 
-                console.log("#time-"+i)
+                console.log("#time-"+i);
                 $("#time-"+ i).text(workTime); 
 
             var workTime24Hr = moment(number.toString(), "LT").format("HH"); 
@@ -36,7 +36,7 @@ $(document).ready(function(){
                 var toDoVal = $("#"+toDoId).val();
                 localStorage.setItem("toDos", toDoVal); 
         
-                console.log(toDoId, toDoVal)
+                console.log(toDoId, toDoVal);
             })
         }      
     );
