@@ -1,4 +1,4 @@
-$(document).ready(function(){ 
+$(document).ready(function(){  
 
     // display current date
     $('#currentDay').append(moment().format('dddd MMMM Do, YYYY, LT')); 
@@ -25,18 +25,23 @@ $(document).ready(function(){
             } else if (time24Hr > workTime24Hr) {
                 $("#text-" + i).css({"background-color":"#d3d3d3", "color":"white"})
             } 
-
-            // var toDos = localStorage.getItem("toDos");
-            
+        });     
                  
-            $(".saveBtn").on("click", function(event){ 
-                var toDoId = $(this).data("number");
-                var toDoVal = $("#"+toDoId).val();
-                localStorage.setItem("toDos", toDoVal);   
+    $(".saveBtn").on("click", function(event){ 
+        var toDoId = $(this).data("number");
+        var toDoVal = $("#"+toDoId).val(); 
+        var toDos = toDoId , toDoVal;
+        $(this).push("toDos");
 
-                console.log(toDoId, toDoVal);
+        localStorage.setItem("toDos", toDoVal);   
+        
+        console.log(localStorage.getItem("toDos", toDoVal));
+    }) 
 
-            })  
-        }
-    )}         
-);  
+    window.onload = function() { 
+       for(var i = 0; i < localStorage.length; i++){
+           $("body").append(localStorage.getItem(localStorage.key(i)));
+       }
+    }  
+});  
+
