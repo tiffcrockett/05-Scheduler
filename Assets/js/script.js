@@ -10,9 +10,9 @@ $(document).ready(function(){
     var numbers = [9, 10, 11, 12, 13, 14, 15, 16, 17]; 
 
         numbers.forEach((number, i) => { 
-            workTime = moment(number.toString(), "LT").format("hh:mm A"); 
-                console.log("#time-"+i);
+             workTime = moment(number.toString(), "LT").format("hh:mm A"); 
                 $("#time-"+ i).text(workTime); 
+                console.log(workTime);
 
             var workTime24Hr = moment(number.toString(), "LT").format("HH"); 
                 console.log(workTime24Hr); 
@@ -24,24 +24,38 @@ $(document).ready(function(){
                 $("#text-" + i).css({"background-color":"#77dd77", "color":"white"})
             } else if (time24Hr > workTime24Hr) {
                 $("#text-" + i).css({"background-color":"#d3d3d3", "color":"white"})
-            } 
-        });     
-                 
-    $(".saveBtn").on("click", function(event){ 
-        var toDoId = $(this).data("number");
-        var toDoVal = $("#"+toDoId).val(); 
-        var toDos = toDoId , toDoVal;
-        $(this).push("toDos");
+            }   
+        }); 
 
-        localStorage.setItem("toDos", toDoVal);   
-        
-        console.log(localStorage.getItem("toDos", toDoVal));
+    var workHour = [9, 10, 11, 12, 1, 2, 3, 4, 5];
+    // key, each work hour  val, input text - combine to local storage
+    for(var i = 0; i < workHour.length; i++) {
+        var hourInput = $("#text-"+i).val();
+        localStorage.getItem("hourInput");
+
+          // check local storage??
+        if(localStorage.getItem("hourInput") === null) {
+            $(this).push($("text-").val());
+        } 
+    }
+ 
+    // bind the save button to the work hour and val of the textarea  
+    $(".saveBtn").on("click", function(event){ 
+        event.preventDefault();
+        var toDoId = $(this).data("number");
+        var toDoVal = $("#text-"+i,toDoId).val();
+        hourInput = toDoId, toDoVal;
+        $(this).push($("text-"+i));
+
+        localStorage.setItem(toDoId,"hourInput");   
+     
+        console.log(toDoId, "hourInput");
     }) 
 
     window.onload = function() { 
        for(var i = 0; i < localStorage.length; i++){
-           $("body").append(localStorage.getItem(localStorage.key(i)));
+           $("body").append(localStorage.getItem("hourInput"));
        }
-    }  
+    }
 });  
 
