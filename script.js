@@ -7,14 +7,14 @@ $(document).ready(function(){
     var time24Hr = moment().format("HH"); 
     
     // set 12 hour time as work hours for each time block
-    var numbers = [9, 10, 11, 12, 13, 14, 15, 16, 17]; 
+    var times = [9, 10, 11, 12, 13, 14, 15, 16, 17]; 
 
-        numbers.forEach((number, i) => { 
-             workTime = moment(number.toString(), "LT").format("hh:mm A"); 
+    for(var i = 0; i < times.length; i++) {
+             workTime = moment(times.toString(), "LT").format("hh:mm A"); 
                 $("#time-"+ i).text(workTime); 
                 console.log(workTime);
 
-            var workTime24Hr = moment(number.toString(), "LT").format("HH"); 
+            var workTime24Hr = moment(times.toString(), "LT").format("HH"); 
                 console.log(workTime24Hr); 
                 console.log(time24Hr);
 
@@ -25,7 +25,7 @@ $(document).ready(function(){
             } else if (time24Hr > workTime24Hr) {
                 $("#text-" + i).css({"background-color":"#d3d3d3", "color":"white"})
             }   
-        }); 
+        }; 
 
     var workHour = [9, 10, 11, 12, 1, 2, 3, 4, 5];
     // key, each work hour  val, input text - combine to local storage
@@ -43,14 +43,11 @@ $(document).ready(function(){
     $(".saveBtn").on("click", function(event){ 
         event.preventDefault();
         var toDoId = $(this).data("number");
-        var index = items.filter(".active").index();
-        var toDoVal = $("#text-".val(), toDoId);
+        var toDoVal = $("#", toDoId);
         hourInput = toDoId, toDoVal;
-        $(this).push($("#text-"+ index );
+        localStorage.setItem(hourInput, toDoVal);   
 
-        localStorage.setItem(toDoId, toDoVal);   
-     
-        console.log(toDoId, toDoVal);
+        console.log(hourInput, toDoVal);
     }) 
 
     window.onload = function() { 
@@ -59,4 +56,3 @@ $(document).ready(function(){
        }
     }
 });  
-
