@@ -35,7 +35,7 @@ $(document).ready(function(){
 
           // check local storage??
         if(localStorage.getItem("hourInput") === null) {
-            $(this).push($("text-").val());
+            $(this).push($("#text-").val());
         } 
     }
  
@@ -43,13 +43,14 @@ $(document).ready(function(){
     $(".saveBtn").on("click", function(event){ 
         event.preventDefault();
         var toDoId = $(this).data("number");
-        var toDoVal = $("#text-"+i,toDoId).val();
+        var index = items.filter(".active").index();
+        var toDoVal = $("#text-".val(), toDoId);
         hourInput = toDoId, toDoVal;
-        $(this).push($("text-"+i));
+        $(this).push($("#text-"+ index );
 
-        localStorage.setItem(toDoId,"hourInput");   
+        localStorage.setItem(toDoId, toDoVal);   
      
-        console.log(toDoId, "hourInput");
+        console.log(toDoId, toDoVal);
     }) 
 
     window.onload = function() { 
