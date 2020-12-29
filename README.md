@@ -1,6 +1,6 @@
 #Overview
 
-The Scheduler was an interesting project - another opportunity to work with local storage.  This application allows the user to input and save event/activity information for times during the traditional business hours of 9a - 5p. This app runs in the browser and is dynamically updated. I used the Moment.js library to work with date and time.
+The Scheduler was a challenging project - another opportunity to work with local storage.  This application allows the user to input and save event/activity information for times during the traditional business hours of 9a - 5p. This app runs in the browser and is dynamically updated. I used the Moment.js library to work with date and time.
 
 The application itself is straight forward.  There is timeblocks for each business hour. The scheduler is color coded to indicate whether the current business hour is a past, present, or future time.  And the user information should persist upon refreshing the web page. The Scheduler is simple and basic, which makes it user-friendly.  Adding a delete button is the only improvement I think necessary, as that would improve its practicality for users.  
 
