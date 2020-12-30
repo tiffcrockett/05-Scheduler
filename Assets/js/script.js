@@ -40,7 +40,7 @@ $(document).ready(function(){
         var hour = parseInt(localStorage.key(i));
         // get index number for each times in array
         var hourIndex = times.indexOf(hour);
-        // retrieve each index with its corresponding text value
+        // retrieve each index with its corresponding text  value
         var details = localStorage.getItem(hour);
         // join text and index
         $("#text-" + hourIndex).val(details);
