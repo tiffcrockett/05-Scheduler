@@ -17,7 +17,7 @@ In the hustle and bustle of busy work days, it is necessary for business owners 
 
 The Work Day Scheduler is simple to use.  The user inputs a task in a input field next to the corresponding time of the event.  The entered tasks persist when the application reloads. The mobile-first feature of the Weather Dashboard makes it useful to users on-the-go.  
 
-The current design is flat.  Aesthetic enhancements would be future improvements the application.  Expanding the timeblocks to include hours before and after the normal work day hours of 9a - 5p, would make the application useful for planning all events and activities, not just work-hour events, and would make it more practicalfor everyday use.
+The current design is flat.  Aesthetic enhancements would be future improvements the application.  Expanding the timeblocks to include hours before and after the normal work day hours of 9a - 5p would make the application useful for planning all events and activities, not just work-hour events, and would make the scheduler more practical for everyday use.
 
 
 ## Application-Image
