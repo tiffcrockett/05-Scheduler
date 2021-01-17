@@ -20,12 +20,8 @@ The Work Day Scheduler is simple to use.  The user inputs a task in a input fiel
 The current design is flat.  Aesthetic enhancements would be future improvements the application.  Expanding the timeblocks to include hours before and after the normal work day hours of 9a - 5p, would make the application useful for planning all events and activities, not just work-hour events, and would make it more practicalfor everyday use.
 
 
-## Application-Images
+## Application-Image
 
-### Desktop Screenshot
-![Screenshot of desktop webpage](https://github.com/tiffcrockett/06-Weather-Dashboard/blob/main/assets/images/Dashboard-desktop.png?)
-
-### Mobile Screenshot
 ![Screenshot of mobile webpage](https://github.com/tiffcrockett/05-Scheduler/blob/main/Assets/images/SchedlrScrnsht.png?)
 
 ## Installation
