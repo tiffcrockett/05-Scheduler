@@ -1,10 +1,20 @@
+*, *::before, *::after {
+	box-sizing: border-box; 
+	margin: 0;
+	padding: 0;
+} 
+
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 1;
+} 
+
+.container {
+  max-width: 768px;
 }
 
-textarea{
+textarea{ 
   background: transparent;
   border: none;
   resize: none;
@@ -13,12 +23,16 @@ textarea{
   padding: 10px;
 }
 
-.jumbotron {
+.jumbotron { 
   text-align: center;
   background-color: transparent;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+} 
+
+.lead {
+  font-size: 13px;
 }
 
 .description{
