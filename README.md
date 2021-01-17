@@ -30,17 +30,12 @@ No prior installation is required to properly use the Weather Dashobard applicat
 
 ## Usage
 
-1. Enter a city name in the input area.
-2. Click the 'Search' button.
-3. The city name will appear on the sidebar. 
-4. Current weather and five-day forecast for that city will displayed in the main area of the weather dashboard.
-5. Click on a city name on the sidebar to search that city again.
-6. City names on the sidebar will persist when the application is reloaded.
-7. Click "Clear History" to remove listed city names. 
+1. Enter an activity in the input field next to the activity time.
+2. Click the 'Save' button.
+3. The activity will persis when the application is reloaded. 
 
 ## Technologies-Used
 
-* [Open Weather Map api](https://openweathermap.org/api)
 * [Bootstrap Framework](https://getbootstrap.com/)
 
 ## Deployed-Link
