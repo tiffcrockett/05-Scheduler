@@ -32,7 +32,7 @@ No prior installation is required to properly use the Weather Dashobard applicat
 
 1. Enter an activity in the input field next to the activity time.
 2. Click the 'Save' button.
-3. The activity will persis when the application is reloaded. 
+3. The activity will persist when the application is reloaded. 
 
 ## Technologies-Used
 
