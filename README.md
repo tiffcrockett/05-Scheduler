@@ -22,7 +22,7 @@ The current design is flat.  Aesthetic enhancements would be future improvements
 
 ## Application-Image
 
-![Screenshot of mobile webpage](https://github.com/tiffcrockett/05-Scheduler/blob/main/Assets/images/SchedlrScrnsht.png?)
+![Screenshot of mobile webpage](https://github.com/tiffcrockett/05-Scheduler/blob/main/Assets/images/SchedScrnsht.png?)
 
 ## Installation
 
